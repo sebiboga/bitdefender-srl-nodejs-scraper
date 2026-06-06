@@ -1,4 +1,4 @@
-# Contributing to EPAM Job Scraper
+# Contributing to BITDEFENDER Job Scraper
 
 Thank you for your interest in contributing!
 
@@ -14,13 +14,16 @@ Thank you for your interest in contributing!
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/epam-systems-international-srl-nodejs-scraper.git
+git clone https://github.com/YOUR_USERNAME/bitdefender-srl-nodejs-scraper.git
 
 # Install dependencies
 npm install
 
-# Run tests
-npm test
+# Run scraper locally
+npm run scrape
+
+# Run with test mode
+npm run scrape -- --test
 ```
 
 ## Code Style

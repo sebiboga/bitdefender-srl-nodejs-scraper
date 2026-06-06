@@ -31,7 +31,7 @@ job_seeker_ro_spider
 ├── demoanaf.js        # CLI wrapper pentru src/anaf.js
 ├── src/anaf.js        # Modul ANAF API (search + company details)
 ├── solr.js            # Operații SOLR (query, upsert, delete, company)
-├── company.json       # Cache companie (fallback când ANAF e down)
+├── tmp/company.json   # Cache companie (fallback când ANAF e down)
 ├── tests/
 │   ├── unit/          # Teste unitare (API-uri mock-uite)
 │   ├── integration/   # Teste de integrare (ANAF + SOLR live)

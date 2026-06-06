@@ -239,8 +239,9 @@ async function main() {
       jobs
     };
 
-    fs.writeFileSync("jobs.json", JSON.stringify(payload, null, 2), "utf-8");
-    console.log("Saved jobs.json");
+    fs.mkdirSync("tmp", { recursive: true });
+    fs.writeFileSync("tmp/jobs.json", JSON.stringify(payload, null, 2), "utf-8");
+    console.log("Saved tmp/jobs.json");
 
     console.log("\n=== Step 4: Upsert jobs to SOLR ===");
     await upsertJobs(payload.jobs);
