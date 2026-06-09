@@ -19,6 +19,7 @@ jobs:
   validate-jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    needs: Automation-Tests
 
     steps:
       - uses: actions/checkout@v5

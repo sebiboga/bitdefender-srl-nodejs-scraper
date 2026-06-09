@@ -9,7 +9,7 @@ import fetch from "node-fetch";
 
 // SOLR configuration
 const SOLR_URL = "https://solr.peviitor.ro/solr/job/update";
-const SOLR_AUTH = process.env.SOLR_AUTH || "your-solr-credentials";
+const SOLR_AUTH = process.env.SOLR_AUTH;
 const COMPANY_NAME = "BITDEFENDER SRL";
 
 /**

@@ -83,6 +83,7 @@ describe('company.js', () => {
 
   beforeAll(async () => {
     process.env.SOLR_AUTH = 'test:test';
+    fs.mkdirSync('tmp', { recursive: true });
     savedCompanyJson = backupCompanyJson();
     company = await import('../../company.js');
   });
@@ -199,6 +200,12 @@ describe('company.js', () => {
   });
 
   describe('validateAndGetCompany', () => {
+    afterEach(() => {
+      if (fs.existsSync(COMPANY_JSON_PATH)) {
+        fs.unlinkSync(COMPANY_JSON_PATH);
+      }
+    });
+
     it('should return company data with status active', async () => {
       mockFetch
         .mockResolvedValueOnce(anafSearchResponse([

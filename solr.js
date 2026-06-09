@@ -19,6 +19,13 @@
 
 import fetch from "node-fetch";
 import fs from "fs";
+import { loadEnvFile } from "node:process";
+
+try {
+  loadEnvFile(".env.local");
+} catch {
+  // .env.local not found, using existing env vars
+}
 
 // ============================================================================
 // CONFIGURATION
